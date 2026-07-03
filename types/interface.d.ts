@@ -13,7 +13,7 @@ export type TokenTypeEncoder = {
     encodedSize?(token: Token, options?: EncodeOptions): number;
 };
 export type MapSorter = (e1: (Token | Token[])[], e2: (Token | Token[])[]) => number;
-export type QuickEncodeToken = (token: Token) => Uint8Array | undefined;
+export type QuickEncodeToken = (token: Token) => Uint8Array<ArrayBuffer> | undefined;
 export interface DecodeTokenizer {
     done(): boolean;
     next(): Token;

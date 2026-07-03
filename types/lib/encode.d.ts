@@ -22,24 +22,24 @@ export function objectToTokens(obj: any, options?: EncodeOptions, refStack?: Ref
 /**
  * @param {any} data
  * @param {EncodeOptions} [options]
- * @returns {Uint8Array}
+ * @returns {Uint8Array<ArrayBuffer>}
  */
-export function encode(data: any, options?: EncodeOptions): Uint8Array;
+export function encode(data: any, options?: EncodeOptions): Uint8Array<ArrayBuffer>;
 /**
  * @param {any} data
  * @param {TokenTypeEncoder[]} encoders
  * @param {EncodeOptions} options
- * @param {Uint8Array} [destination]
- * @returns {Uint8Array}
+ * @param {Uint8Array<ArrayBuffer>} [destination]
+ * @returns {Uint8Array<ArrayBuffer>}
  */
-export function encodeCustom(data: any, encoders: TokenTypeEncoder[], options: EncodeOptions, destination?: Uint8Array): Uint8Array;
+export function encodeCustom(data: any, encoders: TokenTypeEncoder[], options: EncodeOptions, destination?: Uint8Array<ArrayBuffer>): Uint8Array<ArrayBuffer>;
 /**
  * @param {any} data
- * @param {Uint8Array} destination
+ * @param {Uint8Array<ArrayBuffer>} destination
  * @param {EncodeOptions} [options]
  * @returns {{ written: number }}
  */
-export function encodeInto(data: any, destination: Uint8Array, options?: EncodeOptions): {
+export function encodeInto(data: any, destination: Uint8Array<ArrayBuffer>, options?: EncodeOptions): {
     written: number;
 };
 /** @implements {Reference} */
